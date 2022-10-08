@@ -3,10 +3,6 @@ import "../styles.css";
 import { useState } from "react";
 
 function ContactUs() {
-  const [name, setName] = useState("");
-  const [user_email, setUserEmail] = useState("");
-  const [user_message, setMessage] = useState("");
-
   return (
     <div>
       <h1>Get in touch!</h1>
@@ -16,13 +12,12 @@ function ContactUs() {
         id="contact-form"
         class="contact-us"
         action="/contact-us"
-        method="post"
+        method="POST"
       >
-        {/* <!-- Honeypot -->
-  <input type="text" name="_honey" style="display: none" />
-  <!-- Disable captcha -->
-  <input type="hidden" name="_captcha" value="false" /> */}
-
+        {/* Honeypot */}
+        <input type="text" name="_honey" style={{ display: "none" }} />
+        {/* Disable captcha  */}
+        <input type="hidden" name="_captcha" value="false" />
         <input
           type="hidden"
           name="_next"
@@ -35,7 +30,7 @@ function ContactUs() {
             class="c-input"
             type="text"
             placeholder="name"
-            name="name"
+            // name="name"
             required
           />
           <input
