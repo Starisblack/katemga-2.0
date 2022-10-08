@@ -30,7 +30,7 @@ function ContactUs() {
             class="c-input"
             type="text"
             placeholder="name"
-            // name="name"
+            name="user_name"
             required
           />
           <input
