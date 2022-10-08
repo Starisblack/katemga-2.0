@@ -4,7 +4,10 @@ import { Routes, Route, Link } from "react-router-dom";
 
 function Navigation() {
   return (
-    <div>
+    <div> 
+
+    <div className="nav-container">
+         <h1>Nav ITEMS</h1>
       <nav>
         <ul>
           <li>REAL ESTATE</li>
@@ -12,8 +15,10 @@ function Navigation() {
           <li>ELECTRONICS</li>
           <li>ABOUT US</li>
           <li>CONTACT US</li>
+          
         </ul>
       </nav>
+      </div>
     </div>
   );
 }
