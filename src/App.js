@@ -1,4 +1,4 @@
-// import './App.css';
+// import "./styles.css";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 

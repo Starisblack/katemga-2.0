@@ -1,0 +1,28 @@
+* {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+body {
+  margin: 0;
+}
+.nav-bar {
+  background-color: green;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+}
+
+.logo,
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+.nav-link {
+  padding: 0 15px;
+}
+.logo {
+  display: inline;
+}
+.logo-wrap {
+  margin-right: 500px;
+}
