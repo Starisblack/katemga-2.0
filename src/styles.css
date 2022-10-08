@@ -1,0 +1,76 @@
+/* contact form styling start here */
+
+form {
+  width: 80%;
+  margin: 0 auto;
+}
+.post-header {
+  text-align: center;
+}
+.btn {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* styling for our contact us form */
+.contact-us {
+  width: 40%;
+  margin: 0 auto;
+}
+.c-input {
+  display: block;
+  margin: 10px 0px;
+  font-size: 16px;
+  height: 30px;
+  width: 100%;
+}
+.contact-mgs {
+  margin: 10px 0;
+}
+
+.c-header,
+.c-content {
+  text-align: center;
+}
+
+/* test */
+
+form {
+  margin-top: 20px;
+}
+input {
+  width: 50%;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid black;
+  margin: 10px 0px;
+  font-size: 14px;
+  padding-left: 10px;
+}
+textarea {
+  width: 100%;
+  margin: 10px 0px;
+  font-size: 14px;
+  padding-left: 10px;
+}
+button {
+  border: none;
+  padding: 15px;
+  background-color: green;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  width: 90px;
+}
+/* contact form styling ends here */
