@@ -4,15 +4,8 @@ import ReactRouter from "react-router-dom";
 function Navigation() {
   return (
     <div>
-      <nav>
-        <ul>
-          <li>REAL ESTATE</li>
-          <li>CARS/TRUCK</li>
-          <li>ELECTRONICS</li>
-          <li>ABOUT US</li>
-          <li>CONTACT US</li>
-        </ul>
-      </nav>
+      Navigation
+      <h1>This is the start of something awesome</h1>
     </div>
   );
 }
