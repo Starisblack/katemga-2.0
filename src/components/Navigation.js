@@ -4,7 +4,7 @@ function Navigation() {
   return (
     <div>
       Navigation
-      <h1>This is the start of something awesome</h1>
+      <h1>We working on Something</h1>
     </div>
   );
 }
