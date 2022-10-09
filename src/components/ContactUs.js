@@ -32,6 +32,7 @@ function ContactUs() {
             placeholder="name"
             name="user_name"
             required
+            autoFocus
           />
           <input
             id="from_email"
@@ -51,6 +52,7 @@ function ContactUs() {
             id=""
             cols="33"
             rows="10"
+            required
           ></textarea>
         </div>
         <button class="submit-btn" type="submit">
