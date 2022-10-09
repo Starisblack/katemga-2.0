@@ -1,9 +1,17 @@
 import React from "react";
 
 function Footer() {
+  
+
+  const day = new Date();
+
+  const currentDate = day.getFullYear();
+
   return (
-    <div>
-      <p>Copyright @2022</p>
+    
+    <div className="footer">
+      <p>Made with ❤️ in California</p>
+      <p>Copyright © {currentDate} | All rights reserved.</p>
     </div>
   );
 }

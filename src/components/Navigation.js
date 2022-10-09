@@ -15,10 +15,10 @@ function Navigation() {
         <div className="logo-wrap">
           <Link to="/homepage" className="logo">
             <h2 className="logo">KATEMGA</h2>
-            <p class="slogan">Buy | Sell | Rent</p>
+            <p className="slogan">Buy | Sell | Rent</p>
           </Link>
         </div>
-        <div nav-menu>
+        <div className="navbar-container">
           <Link to="/real-estate" className="nav-link">
             REAL ESTATE
           </Link>

@@ -74,3 +74,27 @@ button {
   width: 90px;
 }
 /* contact form styling ends here */
+
+
+/* footer styling starts*/
+.footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: green;
+}
+
+.footer p {
+  margin-top: 10px;
+  font-size: .8rem;
+  color: #fff;
+}
+
+/* footer styling ends */
+
+
+
+
+

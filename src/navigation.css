@@ -8,7 +8,7 @@ body {
   background-color: green;
   letter-spacing: 2px;
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
   padding: 2% 4%;
   align-items: center;
 }
@@ -24,3 +24,32 @@ body {
 .logo {
   display: inline;
 }
+
+
+
+@media screen and (max-width: 450px) {
+  
+  .nav-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 4%;
+    align-items: center;
+  }
+
+
+  .nav-link {
+    font-size: .8rem;
+    margin: .3rem auto;
+    padding: 0;
+  }
+
+  .navbar-container{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0.5rem;
+  }
+}
+
+
