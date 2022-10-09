@@ -52,3 +52,26 @@ body {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 }
+
+@media screen and (max-width: 450px) {
+  .nav-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 4%;
+    align-items: center;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+    margin: 0.3rem auto;
+    padding: 0;
+  }
+
+  .navbar-container {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0.5rem;
+  }
+}
