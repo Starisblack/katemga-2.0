@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles.css";
-import { useState } from "react";
 
 function ContactUs() {
   return (
@@ -11,8 +10,6 @@ function ContactUs() {
         method="POST"
         id="contact-form"
         class="contact-us"
-        action="/contact-us"
-        method="POST"
       >
         {/* Honeypot */}
         <input type="text" name="_honey" style={{ display: "none" }} />
@@ -30,16 +27,13 @@ function ContactUs() {
             class="c-input"
             type="text"
             placeholder="name"
-            name="user_name"
             required
-            autoFocus
           />
           <input
             id="from_email"
             name="user_email"
             class="c-input"
             type="email"
-            name="email"
             placeholder="email"
             required
           />
@@ -47,12 +41,9 @@ function ContactUs() {
             id="message"
             name="message"
             class="contact-msg"
-            name="message"
             placeholder="Type your message..."
-            id=""
             cols="33"
             rows="10"
-            required
           ></textarea>
         </div>
         <button class="submit-btn" type="submit">
