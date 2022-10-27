@@ -9,10 +9,21 @@ import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
 import CreateRealEstatePost from "../CreatePosts/CreateRealEstatePost";
 import Login from "./Login";
+import { signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../firebase-config";
 
 function Navigation() {
   const [isAuth, setIsAuth] = useState(false);
+  let navigate = useNavigate();
 
+  const signUserOut = () => {
+    signOut(auth).then(() => {
+      localStorage.clear();
+      setIsAuth(false);
+      navigate("/homepage");
+    });
+  };
   return (
     <div>
       <nav className="nav-bar">
@@ -23,9 +34,14 @@ function Navigation() {
           </Link>
         </div>
         <div className="navbar-container">
-          <Link to="/login" className="nav-link">
-            LOGIN
-          </Link>
+          {!isAuth ? (
+            <Link to="/login" className="nav-link">
+              LOGIN
+            </Link>
+          ) : (
+            <button onClick={signUserOut}>Log Out</button>
+          )}
+
           <Link to="/createrealestatepost" className="nav-link">
             Create Post
           </Link>
