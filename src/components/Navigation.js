@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../navigation.css";
 import { Routes, Route, Link } from "react-router-dom";
 import Homepage from "./Homepage";
@@ -7,8 +7,12 @@ import CarsTrucks from "./CarsTrucks";
 import Electronics from "./Electronics";
 import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
+import CreateRealEstatePost from "../CreatePosts/CreateRealEstatePost";
+import Login from "./Login";
 
 function Navigation() {
+  const [isAuth, setIsAuth] = useState(false);
+
   return (
     <div>
       <nav className="nav-bar">
@@ -19,6 +23,12 @@ function Navigation() {
           </Link>
         </div>
         <div className="navbar-container">
+          <Link to="/login" className="nav-link">
+            LOGIN
+          </Link>
+          <Link to="/createrealestatepost" className="nav-link">
+            Create Post
+          </Link>
           <Link to="/real-estate" className="nav-link">
             REAL ESTATE
           </Link>
@@ -44,6 +54,11 @@ function Navigation() {
         <Route path="/electronics" element={<Electronics />}></Route>
         <Route path="/about-us" element={<AboutUs />}></Route>
         <Route path="/contact-us" element={<ContactUs />}></Route>
+        <Route
+          path="/createrealestatepost"
+          element={<CreateRealEstatePost />}
+        ></Route>
+        <Route path="/login" element={<Login setIsAuth={setIsAuth} />}></Route>
       </Routes>
     </div>
   );
