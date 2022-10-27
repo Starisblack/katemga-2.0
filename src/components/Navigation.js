@@ -39,12 +39,13 @@ function Navigation() {
               LOGIN
             </Link>
           ) : (
-            <button onClick={signUserOut}>Log Out</button>
+            <>
+              <Link to="/createrealestatepost" className="nav-link">
+                Create Post
+              </Link>
+              <button onClick={signUserOut}>Log Out</button>
+            </>
           )}
-
-          <Link to="/createrealestatepost" className="nav-link">
-            Create Post
-          </Link>
           <Link to="/real-estate" className="nav-link">
             REAL ESTATE
           </Link>
@@ -72,7 +73,7 @@ function Navigation() {
         <Route path="/contact-us" element={<ContactUs />}></Route>
         <Route
           path="/createrealestatepost"
-          element={<CreateRealEstatePost />}
+          element={<CreateRealEstatePost isAuth={isAuth} />}
         ></Route>
         <Route path="/login" element={<Login setIsAuth={setIsAuth} />}></Route>
       </Routes>

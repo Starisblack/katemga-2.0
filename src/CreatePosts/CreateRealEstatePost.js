@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { addDoc, collection } from "firebase/firestore";
-import { db } from "../firebase-config";
+import { auth, db } from "../firebase-config";
 import { useNavigate } from "react-router-dom";
 
-function CreateRealEstatePost() {
+function CreateRealEstatePost({ isAuth }) {
   const [title, setTitle] = useState("");
   const [location, setLocation] = useState("");
   const [price, setPrice] = useState("");
@@ -22,6 +22,13 @@ function CreateRealEstatePost() {
     });
     navigate("/homepage");
   };
+
+  //check if user isn't authenticated then redirect to login page
+  useEffect(() => {
+    if (!isAuth) {
+      navigate("/login");
+    }
+  }, []);
 
   return (
     <div className="createPostPage">
