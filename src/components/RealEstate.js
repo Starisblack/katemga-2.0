@@ -25,8 +25,14 @@ function RealEstate() {
           <div className="post">
             <div className="postHeader">
               <div className="title">
-                <h1>
-                  <a href="#">{post.title}</a>
+                <h1
+                  style={{
+                    textAlign: "left",
+                    paddingLeft: "20px",
+                    color: "blue",
+                  }}
+                >
+                  <span>${post.price}</span> <a href="#">{post.title}</a>
                 </h1>
               </div>
             </div>
