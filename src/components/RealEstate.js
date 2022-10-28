@@ -20,11 +20,19 @@ function RealEstate() {
   return (
     <div className="realEstate">
       <h1>All listing displays here</h1>
-      <p>
-        {realEstatePostsLists.map((post) => {
-          return <div className="post">{post.title}</div>;
-        })}
-      </p>
+      {realEstatePostsLists.map((post) => {
+        return (
+          <div className="post">
+            <div className="postHeader">
+              <div className="title">
+                <h1>
+                  <a href="#">{post.title}</a>
+                </h1>
+              </div>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
