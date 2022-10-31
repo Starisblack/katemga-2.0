@@ -8,7 +8,7 @@ body {
   background-color: green;
   letter-spacing: 2px;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   padding: 2% 4%;
   align-items: center;
 }
@@ -21,16 +21,45 @@ body {
 .nav-link {
   padding: 0 15px;
 }
+
+.nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+}
+
 .logo {
   display: inline;
 }
 
+/* media query for responsiveness */
 
+@media only screen and (max-width: 600px) {
+}
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
 
+/* testing code */
+
+/* tsting gcode  */
+
+@media only screen and (max-width: 830px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
 
 @media screen and (max-width: 450px) {
-  
   .nav-bar {
     flex-wrap: wrap;
     justify-content: center;
@@ -38,14 +67,13 @@ body {
     align-items: center;
   }
 
-
   .nav-link {
-    font-size: .8rem;
-    margin: .3rem auto;
+    font-size: 0.8rem;
+    margin: 0.3rem auto;
     padding: 0;
   }
 
-  .navbar-container{
+  .navbar-container {
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
@@ -53,4 +81,3 @@ body {
     padding: 0.5rem;
   }
 }
-

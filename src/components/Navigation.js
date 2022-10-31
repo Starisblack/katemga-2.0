@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../navigation.css";
 import { Routes, Route, Link } from "react-router-dom";
 import Homepage from "./Homepage";
@@ -7,9 +7,24 @@ import CarsTrucks from "./CarsTrucks";
 import Electronics from "./Electronics";
 import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
+import CreateRealEstatePost from "../CreatePosts/CreateRealEstatePost";
+import Login from "./Login";
+import { signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../firebase-config";
 
 
 function Navigation() {
+  const [isAuth, setIsAuth] = useState(false);
+  let navigate = useNavigate();
+
+  const signUserOut = () => {
+    signOut(auth).then(() => {
+      localStorage.clear();
+      setIsAuth(false);
+      navigate("/homepage");
+    });
+  };
   return (
     <div>
       <nav className="nav-bar">
@@ -20,6 +35,18 @@ function Navigation() {
           </Link>
         </div>
         <div className="navbar-container">
+          {!isAuth ? (
+            <Link to="/login" className="nav-link">
+              LOGIN
+            </Link>
+          ) : (
+            <>
+              <Link to="/createrealestatepost" className="nav-link">
+                Create Post
+              </Link>
+              <button onClick={signUserOut}>Log Out</button>
+            </>
+          )}
           <Link to="/real-estate" className="nav-link">
             REAL ESTATE
           </Link>
@@ -45,6 +72,11 @@ function Navigation() {
         <Route path="/electronics" element={<Electronics />}></Route>
         <Route path="/about-us" element={<AboutUs />}></Route>
         <Route path="/contact-us" element={<ContactUs />}></Route>
+        <Route
+          path="/createrealestatepost"
+          element={<CreateRealEstatePost isAuth={isAuth} />}
+        ></Route>
+        <Route path="/login" element={<Login setIsAuth={setIsAuth} />}></Route>
       </Routes>
     </div>
   );
