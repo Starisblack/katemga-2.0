@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../firebase-config";
+import Card from "./Card"
 
 function RealEstate() {
   const [realEstatePostsLists, setRealEstatePostsLists] = useState([]);
@@ -16,31 +17,22 @@ function RealEstate() {
     };
     getRealEstatePosts();
   }, []);
+<<<<<<< HEAD
+=======
+
+  console.log(realEstatePostsLists);
+>>>>>>> master
 
   return (
-    <div className="realEstate">
+    <div className="realEstate ">
       <h1>All listing displays here</h1>
-      {realEstatePostsLists.map((post) => {
-        return (
-          <div className="post">
-            <div className="postHeader">
-              <div className="title">
-                <h1
-                  style={{
-                    textAlign: "left",
-                    paddingLeft: "20px",
-                    color: "blue",
-                  }}
-                >
-                  <span>${post.price}</span> <a href="#">{post.title}</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        );
-      })}
+
+      <Card   data={realEstatePostsLists}/>
+     
+
+      
     </div>
   );
 }
 
-export default RealEstate;
+export default RealEstate;
