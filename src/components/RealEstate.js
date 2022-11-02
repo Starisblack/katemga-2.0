@@ -9,6 +9,7 @@ function RealEstate() {
 
   //display all posts in the homepage
   useEffect(() => {
+    console.log("Effect called");
     const getRealEstatePosts = async () => {
       const data = await getDocs(realEstatePostsCollectionRef);
       setRealEstatePostsLists(
@@ -16,7 +17,7 @@ function RealEstate() {
       );
     };
     getRealEstatePosts();
-  }, []);
+  }, [""]);
 
   console.log(realEstatePostsLists);
 

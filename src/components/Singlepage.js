@@ -7,7 +7,7 @@ function Singlepage() {
 
   const { postName } = useParams();
 
-  console.log(postName);
+  //console.log(postName);
 
   return (
     <div className="col-6 mx-auto">
