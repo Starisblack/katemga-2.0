@@ -15,7 +15,7 @@ function RealEstate() {
       );
     };
     getRealEstatePosts();
-  });
+  }, []);
 
   return (
     <div className="realEstate">
