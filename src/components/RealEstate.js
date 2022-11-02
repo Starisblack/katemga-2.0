@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../firebase-config";
-import Card from "./Card"
+import Card from "./Card";
 
 function RealEstate() {
   const [realEstatePostsLists, setRealEstatePostsLists] = useState([]);
@@ -24,12 +24,9 @@ function RealEstate() {
     <div className="realEstate ">
       <h1>All listing displays here</h1>
 
-      <Card   data={realEstatePostsLists}/>
-     
-
-      
+      <Card data={realEstatePostsLists} />
     </div>
   );
 }
 
-export default RealEstate;
+export default RealEstate;
