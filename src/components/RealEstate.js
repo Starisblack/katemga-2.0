@@ -22,7 +22,7 @@ function RealEstate() {
 
   return (
     <div className="realEstate ">
-      <h1>All listing displays here</h1>
+      <h1 style={{ textAlign: "center" }}>All listing displays here</h1>
 
       <Card data={realEstatePostsLists} />
     </div>
