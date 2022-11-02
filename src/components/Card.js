@@ -18,16 +18,16 @@ function Card({ data }) {
                   preserveAspectRatio="xMidYMid slice"
                   focusable="false"
                 >
-                  <title>Placeholder</title>
+                  <title>katemga</title>
                   <rect width="100%" height="100%" fill="#55595c"></rect>
                   <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
+                    listing image
                   </text>
                 </svg>
 
                 <div className="card-body">
-                  <p className="card-text">{post.description}</p>
-                  <p className="card-text">{post.title}</p>
+                  {/* <p className="card-text">{post.description}</p> */}
+                  <h4 className="card-text">{post.title}</h4>
                   <div className="d-flex justify-content-between align-items-center">
                     <div className="btn-group">
                       <Link
@@ -37,15 +37,17 @@ function Card({ data }) {
                           description: post.description,
                           title: post.title,
                           price: post.price,
+                          phone: post.phone,
+                          location: post.location,
                         }}
                       >
-                        View
+                        View Listing
                       </Link>
                       <button
                         type="button"
                         className="btn btn-sm btn-outline-secondary"
                       >
-                        {post.price}
+                        Price ${post.price}
                       </button>
                     </div>
                     <small className="text-muted">9 mins</small>

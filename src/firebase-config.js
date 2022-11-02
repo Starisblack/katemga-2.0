@@ -11,13 +11,13 @@ import env from "react-dotenv";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTHDOMAIN,
-  projectId: process.env.REACT_APP_PROJECTID,
-  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID,
-  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
+  apiKey: "AIzaSyDfDD-V5YFcQyMvo4rgcnDHvw6PtoDp0SU",
+  authDomain: "katemga-dc780.firebaseapp.com",
+  projectId: "katemga-dc780",
+  storageBucket: "katemga-dc780.appspot.com",
+  messagingSenderId: "530300871492",
+  appId: "1:530300871492:web:296473755604e432bf6d11",
+  measurementId: "G-BCQJWGRZFW",
 };
 
 // Initialize Firebase

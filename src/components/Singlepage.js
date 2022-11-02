@@ -22,29 +22,41 @@ function Singlepage() {
           preserveAspectRatio="xMidYMid slice"
           focusable="false"
         >
-          <title>Placeholder</title>
+          <title>katemga</title>
           <rect width="100%" height="100%" fill="#55595c"></rect>
           <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-            Thumbnail
+            Listing photo
           </text>
         </svg>
 
         <div className="card-body">
-          <p className="card-text">{state.description}</p>
-          <p className="card-text">{state.title}</p>
+          <p className="card-text" style={{ textAlign: "center" }}>
+            {" "}
+            {state.description}
+          </p>
+          <p className="card-text">
+            <b>Listing Title:</b> {state.title}
+          </p>
+          <p className="card-text">
+            <b>Phone:</b> {state.phone}
+          </p>
+          <p className="card-text">
+            <b>Location:</b> {state.location}
+          </p>
+
           <div className="d-flex justify-content-between align-items-center">
             <div className="btn-group">
-              <button
+              {/* <button
                 type="button"
                 className="btn btn-sm btn-outline-secondary"
               >
                 View
-              </button>
+              </button> */}
               <button
                 type="button"
                 className="btn btn-sm btn-outline-secondary"
               >
-                {state.price}
+                Price ${state.price}
               </button>
             </div>
             <small className="text-muted">9 mins</small>
