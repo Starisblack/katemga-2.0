@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../firebase-config";
 import Card from "./Card"
+import { HalfMalf } from "react-spinner-animated";
 
 function RealEstate() {
   const [realEstatePostsLists, setRealEstatePostsLists] = useState([]);
   const realEstatePostsCollectionRef = collection(db, "realEstatePosts");
+  const [loadingData, setLoading]= useState(true);
 
   //display all posts in the homepage
   useEffect(() => {
@@ -14,8 +16,10 @@ function RealEstate() {
       setRealEstatePostsLists(
         data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
       );
+      setLoading(false);
     };
     getRealEstatePosts();
+   
   }, []);
 
   console.log(realEstatePostsLists);
@@ -24,7 +28,7 @@ function RealEstate() {
     <div className="realEstate ">
       <h1>All listing displays here</h1>
 
-      <Card   data={realEstatePostsLists}/>
+     { loadingData ? <HalfMalf  text={"Loading..."} center={false} /> : <Card   details={realEstatePostsLists}/>}
      
 
       
