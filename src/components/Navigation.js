@@ -13,6 +13,7 @@ import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../firebase-config";
 
+
 function Navigation() {
   const [isAuth, setIsAuth] = useState(false);
   let navigate = useNavigate();
