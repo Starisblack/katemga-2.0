@@ -56,7 +56,7 @@ function Card({ data }, { isAuth }) {
                         type="button"
                         className="btn btn-sm btn-outline-secondary"
                       >
-                        Price ${post.price}
+                        Price ${parseInt(post.price).toLocaleString()}
                       </button>
                     </div>
                     {isAuth && post.author.id === auth.currentUser.uid && (
