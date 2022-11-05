@@ -10,17 +10,19 @@ function CreateRealEstatePost({ isAuth }) {
   const [phone, setPhone] = useState("");
   const [description, setDescription] = useState("");
 
+  //create a listing function
   const realEstatePostsCollectionRef = collection(db, "realEstatePosts");
   let navigate = useNavigate();
   const createRealEstatePost = async () => {
     await addDoc(realEstatePostsCollectionRef, {
       title,
+      author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
       location,
       price,
       phone,
       description,
     });
-    navigate("/homepage");
+    navigate("/homepage"); //redirect to the hp after listing is created
   };
 
   //check if user isn't authenticated then redirect to login page
@@ -29,7 +31,7 @@ function CreateRealEstatePost({ isAuth }) {
     if (!isAuth) {
       navigate("/login");
     }
-  }, [""]);
+  }, [isAuth, navigate]);
 
   return (
     <div className="createPostPage">
