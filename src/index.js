@@ -14,7 +14,6 @@ root.render(
       <Routes>
         <Route path="/real-estate/:postName" element={<Singlepage />} />
         <Route path="/homepage/:postName" element={<Singlepage />} />
-
         <Route path="/" exact element={<App />} />
       </Routes>
       <Footer />

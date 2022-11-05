@@ -13,7 +13,6 @@ import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../firebase-config";
 
-
 function Navigation() {
   const [isAuth, setIsAuth] = useState(false);
   let navigate = useNavigate();
@@ -67,7 +66,10 @@ function Navigation() {
 
       <Routes>
         <Route path="/homepage" element={<Homepage />}></Route>
-        <Route path="/real-estate" element={<RealEstate />}></Route>
+        <Route
+          path="/real-estate"
+          element={<RealEstate isAuth={isAuth} />}
+        ></Route>
         <Route path="/cars-trucks" element={<CarsTrucks />}></Route>
         <Route path="/electronics" element={<Electronics />}></Route>
         <Route path="/about-us" element={<AboutUs />}></Route>

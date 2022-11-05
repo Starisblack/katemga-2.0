@@ -20,8 +20,6 @@ function Homepage() {
 
   return (
     <div className="homepage">
-      {/* <h3>All listing displays here</h3> */}
-
       <Card data={realEstatePostsLists} />
     </div>
   );

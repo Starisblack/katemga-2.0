@@ -3,12 +3,13 @@ import { getDocs, collection } from "firebase/firestore";
 import { db } from "../firebase-config";
 import Card from "./Card";
 
-function RealEstate() {
+function RealEstate(isAuth) {
   const [realEstatePostsLists, setRealEstatePostsLists] = useState([]);
   const realEstatePostsCollectionRef = collection(db, "realEstatePosts");
 
   //display all posts in the homepage
   useEffect(() => {
+    console.log("useEffect activated");
     const getRealEstatePosts = async () => {
       const data = await getDocs(realEstatePostsCollectionRef);
       setRealEstatePostsLists(

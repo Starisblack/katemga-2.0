@@ -1,4 +1,6 @@
+import { deleteDoc, doc } from "firebase/firestore";
 import { useParams, useLocation } from "react-router-dom";
+import { db } from "../firebase-config";
 
 function Singlepage() {
   let location = useLocation();
@@ -7,7 +9,13 @@ function Singlepage() {
 
   const { postName } = useParams();
 
-  console.log(postName);
+  //console.log(postName);
+
+  // //func to delete a post
+  // const deletePost = async (id) => {
+  //   const realEstatePostDoc = doc(db, "realEstatePosts", id);
+  //   await deleteDoc();
+  // };
 
   return (
     <div className="col-6 mx-auto">
@@ -32,17 +40,14 @@ function Singlepage() {
         <div className="card-body">
           <p className="card-text" style={{ textAlign: "center" }}>
             {" "}
-            {state.description}
+            {/* {state.description} */}
           </p>
+
           <p className="card-text">
-            <b>Listing Title:</b> {state.title}
+            {/* <b>Listing Title:</b> {state.title} */}
           </p>
-          <p className="card-text">
-            <b>Phone:</b> {state.phone}
-          </p>
-          <p className="card-text">
-            <b>Location:</b> {state.location}
-          </p>
+          <p className="card-text">{/* <b>Phone:</b> {state.phone} */}</p>
+          <p className="card-text">{/* <b>Location:</b> {state.location} */}</p>
 
           <div className="d-flex justify-content-between align-items-center">
             <div className="btn-group">
@@ -56,10 +61,10 @@ function Singlepage() {
                 type="button"
                 className="btn btn-sm btn-outline-secondary"
               >
-                Price ${state.price}
+                {/* Price ${state.price} */}
               </button>
             </div>
-            <small className="text-muted">9 mins</small>
+            {/* <small className="text-muted">9 mins</small> */}
           </div>
         </div>
       </div>
