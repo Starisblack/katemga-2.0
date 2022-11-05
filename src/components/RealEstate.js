@@ -3,6 +3,7 @@ import { getDocs, collection } from "firebase/firestore";
 import { db } from "../firebase-config";
 import Card from "./Card"
 import { HalfMalf } from "react-spinner-animated";
+import 'react-spinner-animated/dist/index.css'
 
 function RealEstate() {
   const [realEstatePostsLists, setRealEstatePostsLists] = useState([]);
@@ -11,8 +12,10 @@ function RealEstate() {
 
   //display all posts in the homepage
   useEffect(() => {
+    
     const getRealEstatePosts = async () => {
       const data = await getDocs(realEstatePostsCollectionRef);
+      console.log(data)
       setRealEstatePostsLists(
         data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
       );
@@ -22,7 +25,7 @@ function RealEstate() {
    
   }, []);
 
-  console.log(realEstatePostsLists);
+
 
   return (
     <div className="realEstate ">
