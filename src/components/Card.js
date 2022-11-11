@@ -68,7 +68,7 @@ function Card({ data }, { isAuth }) {
                         }}
                       >
                         {" "}
-                        &#x1F5D1;{" "}
+                        &#x1F5D1; delete
                       </button>
                     )}
                     {/* <small className="text-muted">9 mins</small> */}
