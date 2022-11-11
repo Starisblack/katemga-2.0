@@ -5,10 +5,12 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 2em 1em 0;
+  align-items: center;
 }
 .navbar-container {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 .logo,
 .nav-link {
@@ -23,11 +25,22 @@ body {
   font-weight: 100;
 }
 .logo:hover {
-  color: black;
+  color: black !important;
 }
 
 p {
   margin: 0px;
+}
+
+.c-listing {
+  border: 1px solid green;
+  padding: .5rem 1rem;
+  border-radius: 4px;
+}
+
+.c-listing:hover {
+   background-color: green;
+   color: white !important;
 }
 
 /* .nav-link:hover {
