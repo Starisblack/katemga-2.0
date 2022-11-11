@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+import Homepage from "./components/Homepage";
 import Singlepage from "./components/Singlepage";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
@@ -13,9 +13,10 @@ root.render(
       <Navigation />
       <Routes>
         <Route path="/real-estate/:postName" element={<Singlepage />} />
-        <Route path="/homepage/:postName" element={<Singlepage />} />
-        <Route path="/" exact element={<App />} />
+        
+        <Route path="/" exact element={<Homepage />} />
       </Routes>
+      
       <Footer />
     </BrowserRouter>
   </React.StrictMode>
