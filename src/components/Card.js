@@ -56,7 +56,7 @@ function Card({ data }, { isAuth }) {
                         type="button"
                         className="btn btn-sm btn-outline-secondary"
                       >
-                        Price ${post.price}
+                        Price ${parseInt(post.price).toLocaleString()}
                       </button>
                     </div>
                     {isAuth && post.author.id === auth.currentUser.uid && (
@@ -68,7 +68,7 @@ function Card({ data }, { isAuth }) {
                         }}
                       >
                         {" "}
-                        &#x1F5D1;{" "}
+                        &#x1F5D1; delete
                       </button>
                     )}
                     {/* <small className="text-muted">9 mins</small> */}

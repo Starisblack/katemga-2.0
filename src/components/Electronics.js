@@ -1,9 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import CreateElectronicListing from "../CreateListings/CreateElectronicListing";
 
 function Electronics() {
   return (
     <div>
-      <h1>All Electronics related posts here</h1>
+      <Link
+        to="/createelectroniclisting"
+        className="c-listing"
+        onClick={CreateElectronicListing}
+      >
+        Create Listing
+      </Link>
     </div>
   );
 }

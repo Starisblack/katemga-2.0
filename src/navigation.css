@@ -1,35 +1,39 @@
-* {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-}
 body {
   margin: 0;
 }
 .nav-bar {
-  background-color: green;
-  letter-spacing: 2px;
   display: flex;
   justify-content: space-between;
-  padding: 2% 4%;
-  align-items: center;
+  padding: 2em 1em 0;
 }
-
+.navbar-container {
+  display: flex;
+  gap: 1rem;
+}
 .logo,
 .nav-link {
-  color: #fff;
   text-decoration: none;
+  color: black;
 }
-.nav-link {
-  padding: 0 15px;
+.logo {
+  font-family: "Circular-Loom";
+  font-weight: bolder;
+}
+.slogan {
+  font-weight: 100;
+}
+.logo:hover {
+  color: black;
 }
 
-.nav-link:hover {
+p {
+  margin: 0px;
+}
+
+/* .nav-link:hover {
   text-decoration: underline;
   text-decoration-thickness: 5px;
-}
-
-.logo {
-  display: inline;
-}
+} */
 
 /* media query for responsiveness */
 
