@@ -12,7 +12,10 @@ import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../firebase-config";
 import MyListings from "./MyListings";
-import CreateElectronicListing from "../CreateListings/CreateElectronicListing";
+import CreateCars from "../CreateListings/CreateCars";
+import CreateElectronic from "../CreateListings/CreateElectronic";
+
+
 function Navigation() {
   const [isAuth, setIsAuth] = useState(false);
   let navigate = useNavigate();
@@ -63,6 +66,10 @@ function Navigation() {
           <Link to="/contact-us" className="nav-link">
             Contact
           </Link>
+            
+          <Link to="/categories" className="c-listing">
+                Create Listing
+          </Link>
         </div>
       </nav>
 
@@ -77,8 +84,12 @@ function Navigation() {
           element={<CreateRealEstatePost />}
         ></Route>
         <Route
-          path="/createelectroniclisting"
-          element={<CreateElectronicListing />}
+          path="/createcar"
+          element={<CreateCars />}
+        ></Route>
+        <Route
+          path="/create-electronic"
+          element={<CreateElectronic />}
         ></Route>
         <Route path="/login" element={<Login setIsAuth={setIsAuth} />}></Route>
         <Route path="/mylistings" element={<MyListings />}></Route>

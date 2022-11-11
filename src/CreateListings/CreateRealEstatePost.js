@@ -83,6 +83,7 @@ function CreateRealEstatePost({ isAuth }) {
           <label>Description </label>
           <textarea
             type="text"
+            rows="10"
             onChange={(event) => {
               setDescription(event.target.value);
             }}

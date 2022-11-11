@@ -11,6 +11,15 @@ html {
   color: black;
 }
 
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  color: green !important;
+}
+
 /* contact form styling start here */
 
 form {
@@ -128,13 +137,14 @@ button {
 }
 
 .cpContainer {
-  width: 30rem;
-  padding: 5px;
-  background-color: green;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
+  width: 1086px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px rgb(168 168 168 / 50%);
+  border-radius: 10px;
+  margin: 30px auto 10px;
+  padding: 57px;
 }
+
 
 .cpContainer h1 {
   text-align: center;
@@ -143,26 +153,21 @@ button {
 .cpContainer label {
   font-size: 25px;
 }
-.cpContainer .inputGp {
+.cpContainer {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
 }
 
-.inputGp input,
-.inputGp textarea {
-  font-size: 18px;
-  border: none;
-  border-radius: 2px;
-  padding: 5px;
+input{
+  border: 0 solid #ccc;
+  border: 1px solid #ccc;
+  width: 100%;
 }
 
-.inputGp input {
-  height: 40px;
-}
-.inputGp textarea {
-  height: 150px;
-}
+
+
+
 
 .cpContainer button {
   border-radius: 5px;
@@ -170,6 +175,7 @@ button {
   font-size: 18px;
   color: black;
 }
+
 input,
 textarea {
   margin-top: 5px;

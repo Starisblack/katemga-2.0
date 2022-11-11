@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../firebase-config";
 import Card from "./Card";
+import {Link} from "react-router-dom";
 
 function Homepage() {
   const [realEstatePostsLists, setRealEstatePostsLists] = useState([]);
@@ -20,7 +21,7 @@ function Homepage() {
 
   return (
     <div className="homepage">
-       
+      
       <Card data={realEstatePostsLists} />
     </div>
   );
