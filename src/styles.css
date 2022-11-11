@@ -1,3 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  font-family: "Epilogue", sans-serif;
+}
+.nav-link {
+  color: black;
+}
+
 /* contact form styling start here */
 
 form {
@@ -40,10 +53,16 @@ input[type="number"] {
 }
 
 .c-header,
-.c-content {
+.c-content,
+.contact-header {
   text-align: center;
 }
-
+.submit-btn {
+  background: black;
+  color: white;
+  width: 100%;
+  border-radius: 10px;
+}
 /* test */
 
 form {
@@ -74,17 +93,28 @@ button {
 }
 /* contact form styling ends here */
 
+/* styling for our real estate page start here*/
+.realEstate-page {
+  text-align: center;
+}
+
+/* styling for our real estate page Ends here*/
+
 /* footer styling starts*/
 .footer {
-  text-align: center;
-  width: 100%;
   background-color: green;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem 0.5rem;
 }
 
 .footer p {
   margin-top: 10px;
   font-size: 0.8rem;
-  color: #fff;
+}
+.footer-right > img {
+  width: 30px;
 }
 
 /* footer styling ends */
@@ -93,18 +123,15 @@ button {
 
 .createPostPage {
   width: 100%;
-  height: calc(100vh - 80px);
   display: grid;
   place-items: center;
 }
 
 .cpContainer {
-  width: 500px;
-  height: 100%;
-  padding: 20px;
+  width: 30rem;
+  padding: 5px;
   background-color: green;
   border-radius: 12px;
-  color: white;
   display: flex;
   flex-direction: column;
 }
@@ -141,6 +168,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-size: 18px;
+  color: black;
 }
 input,
 textarea {
@@ -160,7 +188,7 @@ textarea {
   font-size: 30px;
 }
 
-/* GOOGLE BUTTOn */
+/* GOOGLE BUTTON */
 .login-with-google-btn {
   cursor: pointer;
   transition: background-color 0.3s, box-shadow 0.3s;

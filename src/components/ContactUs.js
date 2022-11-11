@@ -4,7 +4,7 @@ import "../styles.css";
 function ContactUs() {
   return (
     <div>
-      <h1>Get in touch!</h1>
+      <h1 className="contact-header">Get in touch!</h1>
       <form
         action="https://formsubmit.co/91a648979bd7c79f68a38baba2337c4d"
         method="POST"
@@ -44,6 +44,7 @@ function ContactUs() {
             placeholder="Type your message..."
             cols="33"
             rows="10"
+            required
           ></textarea>
         </div>
         <button class="submit-btn" type="submit">

@@ -7,12 +7,13 @@ import CarsTrucks from "./CarsTrucks";
 import Electronics from "./Electronics";
 import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
-import CreateRealEstatePost from "../CreatePosts/CreateRealEstatePost";
+import CreateRealEstatePost from "../CreateListings/CreateRealEstatePost";
 import Login from "./Login";
 import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../firebase-config";
-
+import MyListings from "./MyListings";
+import CreateElectronicListing from "../CreateListings/CreateElectronicListing";
 function Navigation() {
   const [isAuth, setIsAuth] = useState(false);
   let navigate = useNavigate();
@@ -29,56 +30,60 @@ function Navigation() {
       <nav className="nav-bar">
         <div className="logo-wrap">
           <Link to="/homepage" className="logo">
-            <h2 className="logo">KATEMGA</h2>
+            <h3 className="logo">katemga</h3>
             <p className="slogan">Buy | Sell | Rent</p>
           </Link>
         </div>
         <div className="navbar-container">
           {!isAuth ? (
             <Link to="/login" className="nav-link">
-              LOGIN
+              Login
             </Link>
           ) : (
             <>
-              <Link to="/createrealestatepost" className="nav-link">
-                Create Post
+              <Link className="nav-link" onClick={signUserOut}>
+                Log Out
               </Link>
-              <button onClick={signUserOut}>Log Out</button>
+              <Link to="/mylistings" className="nav-link">
+                My Listings
+              </Link>
             </>
           )}
           <Link to="/real-estate" className="nav-link">
-            REAL ESTATE
+            Real Estate
           </Link>
           <Link to="/cars-trucks" className="nav-link">
-            CARS/TRUCKS
+            Cars/Trucks
           </Link>
           <Link to="/electronics" className="nav-link">
-            ELECTRONICS
+            Electronics
           </Link>
-          <Link to="/about-us" className="nav-link">
-            ABOUT US
-          </Link>
+          {/* <Link to="/about-us" className="nav-link">
+            About
+          </Link> */}
           <Link to="/contact-us" className="nav-link">
-            CONTACT US
+            Contact
           </Link>
         </div>
       </nav>
 
       <Routes>
         <Route path="/homepage" element={<Homepage />}></Route>
-        <Route
-          path="/real-estate"
-          element={<RealEstate isAuth={isAuth} />}
-        ></Route>
+        <Route path="/real-estate" element={<RealEstate />}></Route>
         <Route path="/cars-trucks" element={<CarsTrucks />}></Route>
         <Route path="/electronics" element={<Electronics />}></Route>
         <Route path="/about-us" element={<AboutUs />}></Route>
         <Route path="/contact-us" element={<ContactUs />}></Route>
         <Route
           path="/createrealestatepost"
-          element={<CreateRealEstatePost isAuth={isAuth} />}
+          element={<CreateRealEstatePost />}
+        ></Route>
+        <Route
+          path="/createelectroniclisting"
+          element={<CreateElectronicListing />}
         ></Route>
         <Route path="/login" element={<Login setIsAuth={setIsAuth} />}></Route>
+        <Route path="/mylistings" element={<MyListings />}></Route>
       </Routes>
     </div>
   );

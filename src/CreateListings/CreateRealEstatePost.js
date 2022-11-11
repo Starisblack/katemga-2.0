@@ -26,24 +26,17 @@ function CreateRealEstatePost({ isAuth }) {
   };
 
   //check if user isn't authenticated then redirect to login page
-  useEffect(() => {
-    console.log("login effect called");
-    if (!isAuth) {
-      navigate("/login");
-    }
-  }, [isAuth, navigate]);
+  // useEffect(() => {
+  //   console.log("login effect called");
+  //   if (!isAuth) {
+  //     navigate("/login");
+  //   }
+  // }, [isAuth, navigate]);
 
   return (
     <div className="createPostPage">
       <div className="cpContainer">
-        <h1 class="post-header">Post a listing</h1>
-        {/* <label>Add Photo</label>
-        <input
-          type="file"
-          onChange={(event) => {
-            setImage1(URL.createObjectURL(event.target.files[0]));
-          }}
-        /> */}
+        <h1 class="post-header">Create listing</h1>
 
         <div className="inputGp">
           <label>Title</label>
@@ -97,7 +90,7 @@ function CreateRealEstatePost({ isAuth }) {
         </div>
 
         <button class="" type="submit" onClick={createRealEstatePost}>
-          Post listing
+          Publish
         </button>
       </div>
     </div>

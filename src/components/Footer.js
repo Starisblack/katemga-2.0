@@ -1,26 +1,23 @@
 import React from "react";
 
 function Footer() {
-  
-
   const day = new Date();
 
   const currentDate = day.getFullYear();
 
   return (
-      <div>
-      
-    <footer className="footer mt-5 py-3 ">
-  <div className="container">
-  
-      <p>Made with ❤️ in California</p>
-      <p>Copyright © {currentDate} | All rights reserved.</p>
-    
-  </div>
-</footer>
-</div>
-    
-    
+    <div className="footer">
+      <div className="footer-left">
+        <p>Copyright © {currentDate} | All rights reserved.</p>
+      </div>
+      <div className="footer-center">
+        <p>Made with ❤️ in California</p>
+      </div>
+      <div className="footer-right">
+        <img src="./images/instagram.png" alt="instagram-icon" />
+        <img src="./images/facebook.png" alt="facebook-icon" />
+      </div>
+    </div>
   );
 }
 

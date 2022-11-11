@@ -4,6 +4,8 @@ import { db } from "../firebase-config";
 import Card from "./Card"
 import { HalfMalf } from "react-spinner-animated";
 import 'react-spinner-animated/dist/index.css'
+import { Link } from "react-router-dom";
+import CreateRealEstatePost from "../CreateListings/CreateRealEstatePost";
 
 function RealEstate(isAuth) {
   const [realEstatePostsLists, setRealEstatePostsLists] = useState([]);
@@ -28,13 +30,17 @@ function RealEstate(isAuth) {
 
 
   return (
-    <div className="realEstate ">
-      <h1>All listing displays here</h1>
+    <div className="realEstate-page ">
+      <Link
+        to="/createrealestatepost"
+        className="c-listing"
+        onClick={CreateRealEstatePost}
+      >
+        Create Listing
+      </Link>
+      <button type="" onClick={CreateRealEstatePost}></button>
 
-     { loadingData ? <HalfMalf  text={"Loading..."} center={false} /> : <Card   details={realEstatePostsLists}/>}
-     
-
-      
+      <Card data={realEstatePostsLists} />
     </div>
   );
 }
