@@ -20,6 +20,7 @@ function Homepage() {
 
   return (
     <div className="homepage">
+       
       <Card data={realEstatePostsLists} />
     </div>
   );

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../navigation.css";
 import { Routes, Route, Link } from "react-router-dom";
-import Homepage from "./Homepage";
 import RealEstate from "./RealEstate";
 import CarsTrucks from "./CarsTrucks";
 import Electronics from "./Electronics";
@@ -22,14 +21,14 @@ function Navigation() {
     signOut(auth).then(() => {
       localStorage.clear();
       setIsAuth(false);
-      navigate("/homepage");
+      navigate("/");
     });
   };
   return (
     <div>
       <nav className="nav-bar">
         <div className="logo-wrap">
-          <Link to="/homepage" className="logo">
+          <Link to="/" className="logo">
             <h3 className="logo">katemga</h3>
             <p className="slogan">Buy | Sell | Rent</p>
           </Link>
@@ -68,7 +67,6 @@ function Navigation() {
       </nav>
 
       <Routes>
-        <Route path="/homepage" element={<Homepage />}></Route>
         <Route path="/real-estate" element={<RealEstate />}></Route>
         <Route path="/cars-trucks" element={<CarsTrucks />}></Route>
         <Route path="/electronics" element={<Electronics />}></Route>

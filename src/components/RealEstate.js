@@ -30,7 +30,7 @@ function RealEstate(isAuth) {
 
 
   return (
-    <div className="realEstate-page ">
+    <div className="realEstate-page">
       <Link
         to="/createrealestatepost"
         className="c-listing"
