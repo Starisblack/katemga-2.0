@@ -10,34 +10,45 @@ function CreateRealEstatePost({ isAuth }) {
   const [phone, setPhone] = useState("");
   const [description, setDescription] = useState("");
 
+  //create a listing function
   const realEstatePostsCollectionRef = collection(db, "realEstatePosts");
   let navigate = useNavigate();
   const createRealEstatePost = async () => {
     await addDoc(realEstatePostsCollectionRef, {
       title,
+      author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
       location,
       price,
       phone,
       description,
     });
-    navigate("/homepage");
+    navigate("/homepage"); //redirect to the hp after listing is created
   };
 
   //check if user isn't authenticated then redirect to login page
   useEffect(() => {
+    console.log("login effect called");
     if (!isAuth) {
       navigate("/login");
     }
-  }, []);
+  }, [isAuth, navigate]);
 
   return (
     <div className="createPostPage">
       <div className="cpContainer">
         <h1 class="post-header">Post a listing</h1>
+        {/* <label>Add Photo</label>
+        <input
+          type="file"
+          onChange={(event) => {
+            setImage1(URL.createObjectURL(event.target.files[0]));
+          }}
+        /> */}
 
         <div className="inputGp">
           <label>Title</label>
           <input
+            autoFocus
             type="text"
             onChange={(event) => {
               setTitle(event.target.value);

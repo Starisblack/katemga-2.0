@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../firebase-config";
+import Card from "./Card";
 
 function Homepage() {
   const [realEstatePostsLists, setRealEstatePostsLists] = useState([]);
@@ -19,12 +20,7 @@ function Homepage() {
 
   return (
     <div className="homepage">
-      <h1>All listing displays here</h1>
-      <p>
-        {realEstatePostsLists.map((post) => {
-          return <div className="post">{post.title}</div>;
-        })}
-      </p>
+      <Card data={realEstatePostsLists} />
     </div>
   );
 }

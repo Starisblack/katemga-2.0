@@ -5,7 +5,7 @@ import Card from "./Card"
 import { HalfMalf } from "react-spinner-animated";
 import 'react-spinner-animated/dist/index.css'
 
-function RealEstate() {
+function RealEstate(isAuth) {
   const [realEstatePostsLists, setRealEstatePostsLists] = useState([]);
   const realEstatePostsCollectionRef = collection(db, "realEstatePosts");
   const [loadingData, setLoading]= useState(true);
@@ -39,4 +39,4 @@ function RealEstate() {
   );
 }
 
-export default RealEstate;
+export default RealEstate;

@@ -8,11 +8,19 @@ function Footer() {
   const currentDate = day.getFullYear();
 
   return (
-    
-    <div className="footer">
+      <div>
+      
+    <footer className="footer mt-5 py-3 ">
+  <div className="container">
+  
       <p>Made with ❤️ in California</p>
       <p>Copyright © {currentDate} | All rights reserved.</p>
-    </div>
+    
+  </div>
+</footer>
+</div>
+    
+    
   );
 }
 
