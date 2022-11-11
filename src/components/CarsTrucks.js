@@ -1,11 +1,7 @@
 import React from "react";
 
 function CarsTrucks() {
-  return (
-    <div>
-      <h1>All Cars and Trucks related posts here</h1>
-    </div>
-  );
+  return <div className="car-page"></div>;
 }
 
 export default CarsTrucks;

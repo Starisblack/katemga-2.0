@@ -2,13 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Electronics() {
-  return (
-    <div>
-    
-       <h1>Listing Electronics </h1>
-     
-    </div>
-  );
+  return <div className="electronic"></div>;
 }
 
 export default Electronics;

@@ -3,7 +3,7 @@ import "../styles.css";
 
 function ContactUs() {
   return (
-    <div>
+    <div className="contact">
       <h1 className="contact-header">Get in touch!</h1>
       <form
         action="https://formsubmit.co/91a648979bd7c79f68a38baba2337c4d"
@@ -47,7 +47,7 @@ function ContactUs() {
             required
           ></textarea>
         </div>
-        <button class="submit-btn" type="submit">
+        <button class="btn" type="submit">
           Send
         </button>
       </form>
