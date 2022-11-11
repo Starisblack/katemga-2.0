@@ -31,14 +31,8 @@ function RealEstate(isAuth) {
 
   return (
     <div className="realEstate-page">
-      <Link
-        to="/createrealestatepost"
-        className="c-listing"
-        onClick={CreateRealEstatePost}
-      >
-        Create Listing
-      </Link>
-      <button type="" onClick={CreateRealEstatePost}></button>
+      
+      
 
       <Card data={realEstatePostsLists} />
     </div>
