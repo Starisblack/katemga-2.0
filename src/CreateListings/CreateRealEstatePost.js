@@ -22,7 +22,7 @@ function CreateRealEstatePost({ isAuth }) {
       phone,
       description,
     });
-    navigate("/homepage"); //redirect to the hp after listing is created
+    navigate("/"); //redirect to the hp after listing is created
   };
 
   //check if user isn't authenticated then redirect to login page
