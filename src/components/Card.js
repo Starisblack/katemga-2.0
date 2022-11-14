@@ -5,17 +5,17 @@ import { deleteDoc, doc } from "firebase/firestore";
 
 function Card({ data }, { isAuth }) {
   //func to delete a post
-  const deletePost = async (id) => {
-    const realEstatePostDoc = doc(db, "realEstatePosts", id);
-    await deleteDoc(realEstatePostDoc);
-  };
+  // const deletePost = async (id) => {
+  //   const realEstatePostDoc = doc(db, "realEstatePosts", id);
+  //   await deleteDoc(realEstatePostDoc);
+  // };
 
   return (
     <div className="container">
       <div className="row g-4 ">
         {data?.map((post) => {
           return (
-            <div key={post.id} className="col-12 col-md-4 col-lg-3">
+            <div key={post._id} className="col-12 col-md-4 col-lg-3">
               <div className="card h-100 shadow-sm">
                 <svg
                   className="bd-placeholder-img card-img-top"
@@ -59,18 +59,7 @@ function Card({ data }, { isAuth }) {
                         Price ${parseInt(post.price).toLocaleString()}
                       </button>
                     </div>
-                    {isAuth && post.author.id === auth.currentUser.uid && (
-                      <button
-                        className="deletePost"
-                        style={{ float: "right" }}
-                        onClick={() => {
-                          deletePost(post.id);
-                        }}
-                      >
-                        {" "}
-                        &#x1F5D1; delete
-                      </button>
-                    )}
+
                     {/* <small className="text-muted">9 mins</small> */}
                   </div>
                 </div>

@@ -2,36 +2,28 @@ import { useState, useEffect } from "react";
 import { addDoc, collection } from "firebase/firestore";
 import { auth, db } from "../firebase-config";
 import { useNavigate } from "react-router-dom";
+import Axios from "axios";
 
-function CreateRealEstatePost({ isAuth }) {
+//mongoDb setup
+const CreateRealEstatePost = () => {
   const [title, setTitle] = useState("");
   const [location, setLocation] = useState("");
   const [price, setPrice] = useState("");
   const [phone, setPhone] = useState("");
   const [description, setDescription] = useState("");
+  const navigate = useNavigate();
 
-  //create a listing function
-  const realEstatePostsCollectionRef = collection(db, "realEstatePosts");
-  let navigate = useNavigate();
-  const createRealEstatePost = async () => {
-    await addDoc(realEstatePostsCollectionRef, {
-      title,
-      author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
-      location,
-      price,
-      phone,
-      description,
+  const addRealEstateListing = () => {
+    //console.log(title)
+    Axios.post("http://localhost:3001/createrealestatepost", {
+      title: title,
+      location: location,
+      price: price,
+      phone: phone,
+      description: description,
     });
-    navigate("/"); //redirect to the hp after listing is created
+    navigate("/");
   };
-
-  //check if user isn't authenticated then redirect to login page
-  // useEffect(() => {
-  //   console.log("login effect called");
-  //   if (!isAuth) {
-  //     navigate("/login");
-  //   }
-  // }, [isAuth, navigate]);
 
   return (
     <div className="createPostPage">
@@ -90,12 +82,12 @@ function CreateRealEstatePost({ isAuth }) {
           ></textarea>
         </div>
 
-        <button class="btn" type="submit" onClick={createRealEstatePost}>
+        <button class="btn" type="submit" onClick={addRealEstateListing}>
           Publish
         </button>
       </div>
     </div>
   );
-}
+};
 
 export default CreateRealEstatePost;
