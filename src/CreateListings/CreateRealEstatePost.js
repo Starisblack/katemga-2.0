@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { addDoc, collection } from "firebase/firestore";
 import { auth, db } from "../firebase-config";
 import { useNavigate } from "react-router-dom";
 import Axios from "axios";

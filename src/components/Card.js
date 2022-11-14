@@ -1,15 +1,8 @@
 import { Link } from "react-router-dom";
 import { auth, db } from "../firebase-config";
-import { deleteDoc, doc } from "firebase/firestore";
 // import { isAuth } from "./RealEstate";
 
 function Card({ data }, { isAuth }) {
-  //func to delete a post
-  // const deletePost = async (id) => {
-  //   const realEstatePostDoc = doc(db, "realEstatePosts", id);
-  //   await deleteDoc(realEstatePostDoc);
-  // };
-
   return (
     <div className="container">
       <div className="row g-4 ">
