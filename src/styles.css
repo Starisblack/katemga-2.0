@@ -3,20 +3,24 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 body,
 html {
   font-family: "Epilogue", sans-serif;
 }
+
+
+
 .nav-link {
   color: black;
 }
 
-a{
+a {
   text-decoration: none;
   color: black;
 }
 
-a:hover{
+a:hover {
   color: green !important;
 }
 
@@ -30,9 +34,15 @@ form {
   text-align: center;
 }
 .btn {
-  display: flex;
   margin: 0 auto;
-  margin-top: 20px;
+  display: flex;
+  background: green;
+  color: white;
+  border-color: white;
+}
+.btn:hover {
+  background-color: green;
+  color: white;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -66,12 +76,7 @@ input[type="number"] {
 .contact-header {
   text-align: center;
 }
-.submit-btn {
-  background: black;
-  color: white;
-  width: 100%;
-  border-radius: 10px;
-}
+
 /* test */
 
 form {
@@ -97,7 +102,6 @@ button {
   color: green;
   font-weight: 500;
   cursor: pointer;
-  margin-bottom: 50px;
   border: none;
 }
 /* contact form styling ends here */
@@ -109,14 +113,35 @@ button {
 }
 
 /* styling for our real estate page Ends here*/
+.categoryPage,
+.realEstate-page,
+.car-page,
+.electronic,
+.my-listings, 
+.homepage,
+.contact {
+  margin: 60px auto;
+  
+}
 
+.category{
+  background: #fff;
+  width: 70%;
+  box-shadow: 2px 2px 8px #d9d9d9;
+  border-radius: 16px;
+  padding: 3rem;
+  margin: 0 auto;
+}
 /* footer styling starts*/
 .footer {
+  position: relative;
+  width: 100%;
   background-color: green;
   align-items: center;
+  color: white;
   display: flex;
   justify-content: space-between;
-  padding: 0 0.5rem 0.5rem;
+  padding: 1rem 3rem;
 }
 
 .footer p {
@@ -138,14 +163,13 @@ button {
 }
 
 .cpContainer {
-  width: 1086px;
-  background: #FFFFFF;
+  width: 70%;
+  background: #ffffff;
   box-shadow: 0px 2px 4px rgb(168 168 168 / 50%);
   border-radius: 10px;
-  margin: 30px auto 10px;
+  margin: 60px auto;
   padding: 57px;
 }
-
 
 .cpContainer h1 {
   text-align: center;
@@ -154,27 +178,12 @@ button {
 .cpContainer label {
   font-size: 25px;
 }
-.cpContainer {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-}
 
-input{
+
+input {
   border: 0 solid #ccc;
   border: 1px solid #ccc;
   width: 100%;
-}
-
-
-
-
-
-.cpContainer button {
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  color: black;
 }
 
 input,
@@ -233,8 +242,6 @@ textarea {
 
 .homepage {
   width: 100%;
-  /* min-height: 100vh; */
-  /* height: auto; */
   margin: 50px 0;
   display: flex;
   flex-direction: column;
@@ -244,8 +251,6 @@ textarea {
 
 .homepage .post {
   width: 600px;
-  height: auto;
-  max-height: 600px;
   background-color: rgb(250, 250, 250);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 20px;
@@ -285,3 +290,6 @@ textarea {
   overflow: hidden;
   overflow-y: auto;
 }
+
+
+

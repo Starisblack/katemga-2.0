@@ -36,7 +36,7 @@ function CreateRealEstatePost({ isAuth }) {
   return (
     <div className="createPostPage">
       <div className="cpContainer">
-        <h1 class="post-header">Create listing</h1>
+        <h1 class="post-header">List a House | Land</h1>
 
         <div className="inputGp">
           <label>Title</label>
@@ -90,7 +90,7 @@ function CreateRealEstatePost({ isAuth }) {
           ></textarea>
         </div>
 
-        <button class="" type="submit" onClick={createRealEstatePost}>
+        <button class="btn" type="submit" onClick={createRealEstatePost}>
           Publish
         </button>
       </div>
