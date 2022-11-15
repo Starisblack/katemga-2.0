@@ -5,6 +5,7 @@ import Axios from "axios";
 
 function Homepage() {
   const [realEstatePostsLists, setRealEstatePostsLists] = useState([]);
+  const [carPostListings, setCarPostListings] = useState([]);
 
   //display all posts in the homepage
   useEffect(() => {
@@ -19,9 +20,22 @@ function Homepage() {
     console.log("Effect Called ");
   }, []);
 
+  //cars listing
+  useEffect(() => {
+    Axios.get("http://localhost:3001/cars/")
+      .then((res) => {
+        setCarPostListings(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    console.log("Effect Called ");
+  }, []);
   return (
     <div className="homepage">
       <Card data={realEstatePostsLists} />
+      <Card data={carPostListings} />
     </div>
   );
 }

@@ -12,9 +12,11 @@ const connection = mongoose.connection;
 
 const realEstateRouter = require("./routes/realEstate");
 const carsRouter = require("./routes/cars");
+const electronicRouter = require("./routes/electronic");
 
 app.use("/real-estate", realEstateRouter);
 app.use("/cars", carsRouter);
+app.use("/electronic", electronicRouter);
 
 connection.once("open", () => {
   console.log("MongoDB database connection established successfully");
