@@ -11,12 +11,6 @@ function Singlepage() {
 
   console.log(postName);
 
-  //func to delete a post
-  const deletePost = async (id) => {
-    const realEstatePostDoc = doc(db, "realEstatePosts", id);
-    await deleteDoc();
-  };
-
   return (
     <div className="col-6 mx-auto">
       <div className="card shadow-sm">
@@ -46,17 +40,24 @@ function Singlepage() {
           <p className="card-text">
             <b>Listing Title:</b> {state?.title}
           </p>
-          <p className="card-text"><b>Phone:</b> {state.phone}</p>
-          <p className="card-text"><b>Location:</b> {state.location}</p>
+          <p className="card-text">
+            <b>Phone:</b> {state.phone}
+          </p>
+          <p className="card-text">
+            <b>Location:</b> {state.location}
+          </p>
+          <p className="card-text">
+            <b>Description:</b> {state.description}
+          </p>
 
           <div className="d-flex justify-content-between align-items-center">
             <div className="btn-group">
-              <button
+              {/* <button
                 type="button"
                 className="btn btn-sm btn-outline-secondary"
               >
                 View
-              </button>
+              </button> */}
               <button
                 type="button"
                 className="btn btn-sm btn-outline-secondary"
@@ -64,7 +65,7 @@ function Singlepage() {
                 Price ${state.price}
               </button>
             </div>
-            <small className="text-muted">9 mins</small>
+            {/* <small className="text-muted">9 mins</small> */}
           </div>
         </div>
       </div>
