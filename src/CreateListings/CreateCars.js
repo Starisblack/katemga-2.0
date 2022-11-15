@@ -43,7 +43,7 @@ const CreateCars = () => {
     Axios.post("http://localhost:3001/cars/create", template);
 
     console.log(template);
-    navigate("/");
+    navigate("/cars-trucks");
   };
   return (
     <div className="cpContainer">

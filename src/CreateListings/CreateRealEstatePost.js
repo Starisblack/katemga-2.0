@@ -21,7 +21,7 @@ const CreateRealEstatePost = () => {
       phone: phone,
       description: description,
     });
-    navigate("/");
+    navigate("/real-estate");
   };
 
   return (

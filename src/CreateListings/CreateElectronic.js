@@ -39,7 +39,7 @@ const CreateElectronic = () => {
     Axios.post("http://localhost:3001/electronic/create", template);
     console.log(template);
 
-    navigate("/");
+    navigate("/electronics");
   };
 
   return (
