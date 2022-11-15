@@ -1,6 +1,4 @@
-import { deleteDoc, doc } from "firebase/firestore";
 import { useParams, useLocation } from "react-router-dom";
-import { db } from "../firebase-config";
 
 function Singlepage() {
   let location = useLocation();
@@ -38,7 +36,7 @@ function Singlepage() {
           </p>
 
           <p className="card-text">
-            <b>Listing Title:</b> {state?.title}
+            <b> Title:</b> {state.title}
           </p>
           <p className="card-text">
             <b>Phone:</b> {state.phone}
@@ -62,7 +60,7 @@ function Singlepage() {
                 type="button"
                 className="btn btn-sm btn-outline-secondary"
               >
-                Price ${state.price}
+                Price ${parseInt(state.price).toLocaleString()}
               </button>
             </div>
             {/* <small className="text-muted">9 mins</small> */}

@@ -1,30 +1,40 @@
 const router = require("express").Router();
-const RealEstateDB = require("../models/RealEstateDB.js");
+const CarsDB = require("../models/CarsDB.js");
 
 router.route("/").get((req, res) => {
-  RealEstateDB.find()
+  CarsDB.find()
     .then((item) => res.json(item))
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
 router.route("/create").post((req, res) => {
   const title = req.body.title;
+  const brand = req.body.brand;
+  const model = req.body.model;
+  const mileage = req.body.mileage;
+  const year = req.body.year;
+  const color = req.body.color;
   const location = req.body.location;
   const price = req.body.price;
   const phone = req.body.phone;
   const description = req.body.description;
 
-  const realEstateData = new RealEstateDB({
+  const carData = new CarsDB({
     title: title,
+    brand: brand,
+    model: model,
+    mileage: mileage,
+    year: year,
+    color: color,
     location: location,
     price: price,
     phone: phone,
     description: description,
   });
 
-  realEstateData
+  carData
     .save()
-    .then((realEstate) => res.json(realEstate))
+    .then((car) => res.json(car))
     .catch((err) => res.status(400).json("Error: " + err));
 });
 

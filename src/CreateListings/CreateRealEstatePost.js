@@ -14,14 +14,14 @@ const CreateRealEstatePost = () => {
 
   const addRealEstateListing = () => {
     //console.log(title)
-    Axios.post("http://localhost:3001/createrealestatepost", {
+    Axios.post("http://localhost:3001/real-estate/create", {
       title: title,
       location: location,
       price: price,
       phone: phone,
       description: description,
     });
-    navigate("/");
+    navigate("/real-estate");
   };
 
   return (

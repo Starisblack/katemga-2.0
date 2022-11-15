@@ -23,7 +23,7 @@ function Card({ data }, { isAuth }) {
                   <title>katemga</title>
                   <rect width="100%" height="100%" fill="#55595c"></rect>
                   <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    listing image
+                    listing photo
                   </text>
                 </svg>
 
