@@ -33,6 +33,11 @@ form {
 .post-header {
   text-align: center;
 }
+
+.btn-group{
+  width: 100%;
+}
+
 .btn {
   margin: 0 auto;
   display: flex;
