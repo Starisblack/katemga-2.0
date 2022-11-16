@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { auth, db } from "../firebase-config";
+
 // import { isAuth } from "./RealEstate";
 
-function Card({ data }, { isAuth }) {
+function Card({ data, pageName }, { isAuth }) {
   return (
     <div className="container">
       <div className="row g-4 ">
@@ -34,13 +34,15 @@ function Card({ data }, { isAuth }) {
                     <div className="btn-group">
                       <Link
                         className="btn btn-sm btn-outline-secondary"
-                        to={`${post.title}`}
+                        to={ `/${pageName}/${post._id}`}
                         state={{
                           description: post.description,
                           title: post.title,
                           price: post.price,
                           phone: post.phone,
                           location: post.location,
+                          year: post.year,
+                          model: post.model
                         }}
                       >
                         View Listing

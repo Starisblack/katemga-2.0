@@ -27,6 +27,8 @@ const CarPage = () => {
             location={state.location}
             price={state.price}
             phone={state.phone}
+            year={state.year}
+            model={state.model}
         />
         </>
      )
