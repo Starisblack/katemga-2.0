@@ -3,10 +3,14 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 body,
 html {
   font-family: "Epilogue", sans-serif;
 }
+
+
+
 .nav-link {
   color: #333;
 }
@@ -29,6 +33,11 @@ form {
 .post-header {
   text-align: center;
 }
+
+.btn-group{
+  width: 100%;
+}
+
 .btn {
   margin: 0 auto;
   display: flex;
@@ -105,17 +114,28 @@ button {
 /* styling for our real estate page start here*/
 .realEstate-page {
   text-align: center;
+  margin: 80px 0;
 }
 
 /* styling for our real estate page Ends here*/
-
-.category,
+.categoryPage,
 .realEstate-page,
 .car-page,
 .electronic,
-.my-listings,
+.my-listings, 
+.homepage,
 .contact {
-  min-height: 100vh;
+  margin: 60px auto;
+  
+}
+
+.category{
+  background: #fff;
+  width: 70%;
+  box-shadow: 2px 2px 8px #d9d9d9;
+  border-radius: 16px;
+  padding: 3rem;
+  margin: 0 auto;
 }
 /* footer styling starts*/
 .footer {
@@ -125,7 +145,7 @@ button {
   color: #333;
   display: flex;
   justify-content: space-between;
-  padding: 0 0.5rem 0.5rem;
+  padding: 1rem 3rem;
 }
 
 .footer p {
@@ -147,11 +167,11 @@ button {
 }
 
 .cpContainer {
-  width: 1086px;
+  width: 70%;
   background: #ffffff;
   box-shadow: 0px 2px 4px rgb(168 168 168 / 50%);
   border-radius: 10px;
-  margin: 30px auto 10px;
+  margin: 60px auto;
   padding: 57px;
 }
 
@@ -162,11 +182,7 @@ button {
 .cpContainer label {
   font-size: 25px;
 }
-.cpContainer {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-}
+
 
 input {
   border: 0 solid #ccc;
@@ -230,7 +246,6 @@ textarea {
 
 .homepage {
   width: 100%;
-  min-height: 100vh;
   margin: 50px 0;
   display: flex;
   flex-direction: column;
@@ -240,8 +255,6 @@ textarea {
 
 .homepage .post {
   width: 600px;
-  height: auto;
-  max-height: 600px;
   background-color: rgb(250, 250, 250);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 20px;

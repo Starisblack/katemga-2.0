@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Axios from "axios";
 import Card from "./Card";
 
+
 function CarsTrucks() {
   const [carPostListings, setCarPostListings] = useState([]);
 
@@ -18,10 +19,17 @@ function CarsTrucks() {
     console.log("Effect Called ");
   }, []);
 
+
   return (
+    <>
     <div className="car-page">
       <Card data={carPostListings} />
     </div>
+
+   
+
+    
+    </>
   );
 }
 

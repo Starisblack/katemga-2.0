@@ -47,7 +47,7 @@ const CreateCars = () => {
   };
   return (
     <div className="cpContainer">
-      <h1 class="post-header">List a Car or Truck</h1>
+      <h1 className="post-header">List a Car or Truck</h1>
 
       <div id="form-group">
         <label for="title">Posting Title</label>

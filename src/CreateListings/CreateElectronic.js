@@ -43,6 +43,7 @@ const CreateElectronic = () => {
   };
 
   return (
+    <div>
     <div className="cpContainer">
       <h1 className="post-header">List a Phone | Computer | Tablet</h1>
 
@@ -123,6 +124,7 @@ const CreateElectronic = () => {
       >
         Publish
       </button>
+    </div>
     </div>
   );
 };

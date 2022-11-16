@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 
 const Categories = () => {
   return (
+    <div className="categoryPage">
     <div className="text-center category">
-      <h1>SELECT A CATEGORY</h1>
+      <h3 className="mb-4">SELECT A CATEGORY</h3>
       <div className="row">
         <div class="col-lg-4">
           <Link to="/createrealestatepost">
@@ -29,6 +30,7 @@ const Categories = () => {
           </Link>
         </div>
       </div>
+    </div>
     </div>
   );
 };
