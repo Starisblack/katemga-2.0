@@ -38,6 +38,7 @@ function Card({ data }, { isAuth }) {
                         state={{
                           description: post.description,
                           title: post.title,
+                          year: post.year,
                           price: post.price,
                           phone: post.phone,
                           location: post.location,

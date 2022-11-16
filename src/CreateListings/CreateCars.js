@@ -43,6 +43,7 @@ const CreateCars = () => {
     Axios.post("http://localhost:3001/cars/create", template);
 
     console.log(template);
+    console.log("new listing added to DB");
     navigate("/cars-trucks");
   };
   return (
