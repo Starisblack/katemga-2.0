@@ -4,7 +4,6 @@ import { Routes, Route, Link } from "react-router-dom";
 import RealEstate from "./RealEstate";
 import CarsTrucks from "./CarsTrucks";
 import Electronics from "./Electronics";
-import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
 import CreateRealEstatePost from "../CreateListings/CreateRealEstatePost";
 import Login from "./Login";
@@ -14,7 +13,6 @@ import { auth } from "../firebase-config";
 import MyListings from "./MyListings";
 import CreateCars from "../CreateListings/CreateCars";
 import CreateElectronic from "../CreateListings/CreateElectronic";
-
 
 function Navigation() {
   const [isAuth, setIsAuth] = useState(false);
@@ -60,15 +58,13 @@ function Navigation() {
           <Link to="/electronics" className="nav-link">
             Electronics
           </Link>
-          {/* <Link to="/about-us" className="nav-link">
-            About
-          </Link> */}
+
           <Link to="/contact-us" className="nav-link">
             Contact
           </Link>
-            
+
           <Link to="/categories" className="c-listing">
-                Create Listing
+            Create Listing
           </Link>
         </div>
       </nav>
@@ -77,20 +73,13 @@ function Navigation() {
         <Route path="/real-estate" element={<RealEstate />}></Route>
         <Route path="/cars-trucks" element={<CarsTrucks />}></Route>
         <Route path="/electronics" element={<Electronics />}></Route>
-        <Route path="/about-us" element={<AboutUs />}></Route>
         <Route path="/contact-us" element={<ContactUs />}></Route>
         <Route
           path="/createrealestatepost"
           element={<CreateRealEstatePost />}
         ></Route>
-        <Route
-          path="/createcar"
-          element={<CreateCars />}
-        ></Route>
-        <Route
-          path="/create-electronic"
-          element={<CreateElectronic />}
-        ></Route>
+        <Route path="/createcar" element={<CreateCars />}></Route>
+        <Route path="/create-electronic" element={<CreateElectronic />}></Route>
         <Route path="/login" element={<Login setIsAuth={setIsAuth} />}></Route>
         <Route path="/mylistings" element={<MyListings />}></Route>
       </Routes>

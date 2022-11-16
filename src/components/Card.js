@@ -52,8 +52,6 @@ function Card({ data }, { isAuth }) {
                         Price ${parseInt(post.price).toLocaleString()}
                       </button>
                     </div>
-
-                    {/* <small className="text-muted">9 mins</small> */}
                   </div>
                 </div>
               </div>
