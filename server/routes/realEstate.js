@@ -28,4 +28,15 @@ router.route("/create").post((req, res) => {
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
+
+router.route("/:id").get ((req, res) => {
+
+
+  RealEstateDB.findById(req.params.id)
+    .then(item => res.json(item))
+    .catch(err => res.status(400).json("Error: " + err));
+
+
+})
+
 module.exports = router;

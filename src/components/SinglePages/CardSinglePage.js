@@ -64,42 +64,9 @@ const CardSinglePage = (props) => {
              
             </div>
 
-            <div className="listing-section">
-                    <h2>Car Details</h2>
-                <div className="listing-details-table">
-                        <span>Year</span> <p>{props.year}</p>
-                        <span>Model</span> <p>{props.model}</p>
+          
 
-                        <span>Location</span> <p>Needham, MA, United States</p>
-
-                        <span>Address</span> <p>37 Chestnut St, Needham, MA 02492</p>
-
-                        <span>Engine</span> <p>8 Cylinder</p>
-
-                        <span>Drive</span> <p>Lhd</p>
-
-                        <span>Drive train</span> <p>Rwd</p>
-
-                        <span>Fuel type</span> <p>Petrol</p>
-
-                        <span>Condition</span> <p>Used</p>
-
-                        <span>VIN</span> <p>11102712002977</p>
-
-                        <span>Color</span> <p>Blue</p>
-
-                        <span>Interior color</span> <p>Beige</p>
-                    </div>
-                </div>
-
-            <div>
-
-                <h2>You Might Also Like</h2>
-
-                listing related items
-
-
-            </div>
+           
 
         </div>
     )
