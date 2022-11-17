@@ -26,15 +26,16 @@ function ContactUs() {
             name="user_name"
             class="c-input"
             type="text"
-            placeholder="name"
+            placeholder="Name"
             required
+            autoFocus
           />
           <input
             id="from_email"
             name="user_email"
             class="c-input"
             type="email"
-            placeholder="email"
+            placeholder="E-mail"
             required
           />
           <textarea
