@@ -33,20 +33,7 @@ function Card({ data, pageName }, { isAuth }) {
                     <div className="btn-group">
                       <Link
                         className="btn btn-sm btn-outline-secondary"
-<<<<<<< HEAD
-                        to={`${post.title}`}
-                        state={{
-                          description: post.description,
-                          title: post.title,
-                          year: post.year,
-                          price: post.price,
-                          phone: post.phone,
-                          location: post.location,
-                        }}
-                      >
-=======
                         to={ `/${pageName}/${post._id}`}  >
->>>>>>> master
                         View Listing
                       </Link>
                       <button
