@@ -23,7 +23,10 @@ function RealEstate(isAuth) {
 
   return (
     <div className="realEstate-page">
-      <Card data={realEstatePostsLists} />
+      <Card 
+      data={realEstatePostsLists} 
+      pageName="real-estate"
+      />
     </div>
   );
 }

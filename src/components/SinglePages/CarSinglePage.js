@@ -16,15 +16,12 @@ const CarPage = () => {
     <>
       <CardSinglePage
         title={state.title}
-        brand={state.brand}
-        model={state.model}
-        mileage={state.mileage}
-        year={state.year}
-        color={state.color}
         location={state.location}
         price={state.price}
         phone={state.phone}
-        description={state.description}
+        year={state.year}
+        brand={state.brand}
+        model={state.model}
       />
     </>
   );

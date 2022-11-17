@@ -25,14 +25,14 @@ const CardSinglePage = (props) => {
 
         <div className="col-lg-3 shadow-sm car-details-box">
           <div>
-            <p class="mt-2-5">List Price</p>
-            <div class="heading-2 mt-1">
+            <p className="mt-2-5">List Price</p>
+            <div className="heading-2 mt-1">
               ${parseInt(props.price).toLocaleString()}
             </div>
 
-            <p class="mb-2">Posted by</p>
+            <p className="mb-2">Posted by</p>
 
-            <div class="user-profile">
+            <div className="user-profile">
               <img className="circle-img" src="" alt="" />
               <div className="text-center">
                 <Link to="">Samuel Ogunniyi</Link>
@@ -50,30 +50,34 @@ const CardSinglePage = (props) => {
               )}
             </button>
 
-            <div class="safety-tips-container">
-              <div class="safety-tips-title">
+            <div className="safety-tips-container">
+              <div className="safety-tips-title">
                 <HealthAndSafetyIcon /> Safety tips
               </div>
-              <div class="safety-tips">
+              <div className="safety-tips">
                 1. Do not pay in advance even for the delivery
               </div>
-              <div class="safety-tips">
+              <div className="safety-tips">
                 2. Try to meet at a safe, public location
               </div>
-              <div class="safety-tips">3. Check the item BEFORE you buy it</div>
-              <div class="safety-tips">
+              <div className="safety-tips">
+                3. Check the item BEFORE you buy it
+              </div>
+              <div className="safety-tips">
                 4. Pay only after collecting the item
               </div>
             </div>
           </div>
         </div>
       </div>
-      <span>Description</span> <p>{props.description}</p>
-      <div class="listing-section">
+
+      <div className="listing-section">
         <h2>Car Details</h2>
-        <div class="listing-details-table">
+        <div className="listing-details-table">
           <span>Year</span> <p>{props.year}</p>
-          <span>Location</span> <p>{props.location}</p>
+          <span>Brand</span> <p>{props.brand}</p>
+          <span>Model</span> <p>{props.model}</p>
+          <span>Location</span> <p>Needham, MA, United States</p>
           <span>Address</span> <p>37 Chestnut St, Needham, MA 02492</p>
           <span>Engine</span> <p>8 Cylinder</p>
           <span>Drive</span> <p>Lhd</p>
@@ -81,10 +85,11 @@ const CardSinglePage = (props) => {
           <span>Fuel type</span> <p>Petrol</p>
           <span>Condition</span> <p>Used</p>
           <span>VIN</span> <p>11102712002977</p>
-          <span>Color</span> <p>{props.color}</p>
+          <span>Color</span> <p>Blue</p>
           <span>Interior color</span> <p>Beige</p>
         </div>
       </div>
+
       <div>
         <h2>You Might Also Like</h2>
         listing related items

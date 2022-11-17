@@ -23,7 +23,10 @@ function CarsTrucks() {
   return (
     <>
     <div className="car-page">
-      <Card data={carPostListings} />
+      <Card 
+      data={carPostListings} 
+      pageName="cars-trucks"
+      />
     </div>
 
    

@@ -50,12 +50,12 @@ function Homepage() {
     <div className="homepage">
       <h3> Real Estate</h3>
 
-      <Card data={realEstatePostsLists} />
+      <Card data={realEstatePostsLists} pageName="real-estate" />
       <h3> Cars & Trucks</h3>
 
-      <Card data={carPostListings} />
+      <Card data={carPostListings} pageName="cars-trucks"/>
       <h3> Phones | Laptops | Tablets</h3>
-      <Card data={electronicListings} />
+      <Card data={electronicListings} pageName="electronics"  />
     </div>
   );
 }
