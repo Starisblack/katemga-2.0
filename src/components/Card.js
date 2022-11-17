@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { auth, db } from "../firebase-config";
+
 // import { isAuth } from "./RealEstate";
 
-function Card({ data }, { isAuth }) {
+function Card({ data, pageName }, { isAuth }) {
   return (
     <div className="container">
       <div className="row g-4 ">
@@ -20,7 +20,6 @@ function Card({ data }, { isAuth }) {
                   preserveAspectRatio="xMidYMid slice"
                   focusable="false"
                 >
-                  <title>katemga</title>
                   <rect width="100%" height="100%" fill="#55595c"></rect>
                   <text x="50%" y="50%" fill="#eceeef" dy=".3em">
                     listing photo
@@ -34,6 +33,7 @@ function Card({ data }, { isAuth }) {
                     <div className="btn-group">
                       <Link
                         className="btn btn-sm btn-outline-secondary"
+<<<<<<< HEAD
                         to={`${post.title}`}
                         state={{
                           description: post.description,
@@ -44,6 +44,9 @@ function Card({ data }, { isAuth }) {
                           location: post.location,
                         }}
                       >
+=======
+                        to={ `/${pageName}/${post._id}`}  >
+>>>>>>> master
                         View Listing
                       </Link>
                       <button

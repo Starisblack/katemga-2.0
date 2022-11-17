@@ -22,7 +22,10 @@ function Electronics() {
 
   return (
     <div className="electronic">
-      <Card data={electronicPostLists} />
+      <Card 
+      data={electronicPostLists} 
+      pageName="electronics"
+      />
     </div>
   );
 }
