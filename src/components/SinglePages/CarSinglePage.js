@@ -16,16 +16,13 @@ const CarPage = () => {
       .catch((err) => {
         console.log(err);
       });
-
-    console.log("Effect Called ");
   }, [postName]);
-
-  console.log(postName);
 
   return (
     <>
       <CardSinglePage
         title={itemData.title}
+        brand={itemData.brand}
         location={itemData.location}
         price={itemData.price}
         phone={itemData.phone}

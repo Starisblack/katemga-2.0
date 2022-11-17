@@ -27,8 +27,7 @@ function Card({ data, pageName }, { isAuth }) {
                 </svg>
 
                 <div className="card-body">
-                  {/* <p className="card-text">{post.description}</p> */}
-                  <h4 className="card-text">{post.title}</h4>
+                   <h4 className="card-text">{post.title}</h4>
                   <div className="d-flex justify-content-between align-items-center">
                     <div className="btn-group">
                       <Link

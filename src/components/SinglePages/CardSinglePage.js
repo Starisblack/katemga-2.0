@@ -19,7 +19,9 @@ const CardSinglePage = (props) => {
           <h2> {props.title}</h2>
 
           <div>
-            <p>{props.location}</p>
+            <p>
+              <b>Location:</b> {props.location}
+            </p>
           </div>
         </div>
 
