@@ -26,7 +26,8 @@ const CardSinglePage = (props) => {
                <div className="col-lg-7 ">
 
                   <img className="item-img" src="" alt=""/>
-                <h2> {props.title}</h2>
+                
+                <h2 className="my-3"> {props.title}</h2>
 
                 <div>
                     <p>{props.location}</p>
@@ -50,7 +51,7 @@ const CardSinglePage = (props) => {
                     </div>
                    </div>
 
-                    <button onClick={onClickHandler} className="btn"> {showPhone ? <>{props.phone}</> : ( <><PhoneIcon className="mx-2"/> Show Contact</>) }</button>
+                    <button onClick={onClickHandler} className="btn"> {showPhone ? <> <a  href={"tel:" + props.phone} > {props.phone} </a> </> : ( <><PhoneIcon className="mx-2"/> Show Contact</>) }</button>
 
                     <div className="safety-tips-container">
                     <div className="safety-tips-title">

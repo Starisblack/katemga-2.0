@@ -1,5 +1,5 @@
 
-.container-fluid, .listing-section{
+.container-fluid{
     padding: 7% 10%;
 }
 
@@ -37,8 +37,14 @@
     border-bottom: 1px solid #E9EAEB
 }
 
-a{
+.user-profile a {
     color: #2d8cf0;
+}
+
+
+
+.btn a{
+   color: white;
     text-decoration: none;
     margin: 0 1rem;
 }
@@ -70,6 +76,7 @@ a{
 
 
 .listing-section{
+    padding: 3% 16%;
     margin-bottom: 12px;
     padding-top: 24px;
     margin-top: 24px;

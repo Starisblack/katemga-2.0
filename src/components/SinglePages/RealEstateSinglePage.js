@@ -4,8 +4,7 @@ import Axios from "axios"
 import {  useParams, useLocation } from "react-router-dom";
 import CardSinglePage from "./CardSinglePage";
 import { useState } from "react";
-import { HalfMalf } from "react-spinner-animated";
-import "react-spinner-animated/dist/index.css";
+
 
 
 
@@ -16,7 +15,7 @@ const RealEstatePage = () => {
     const { postName } = useParams();
 
     const [ itemData, setItemData ] = useState([])
-    const [ loading, setLoading] = useState(true)
+ 
 
     
     useEffect(() => {
@@ -25,7 +24,7 @@ const RealEstatePage = () => {
           .then((res) => {
             setItemData (res.data);
 
-            setLoading(false)
+           
           })
           .catch((err) => {
             console.log(err);
