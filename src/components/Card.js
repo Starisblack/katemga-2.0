@@ -20,7 +20,6 @@ function Card({ data, pageName }, { isAuth }) {
                   preserveAspectRatio="xMidYMid slice"
                   focusable="false"
                 >
-                  <title>katemga</title>
                   <rect width="100%" height="100%" fill="#55595c"></rect>
                   <text x="50%" y="50%" fill="#eceeef" dy=".3em">
                     listing photo
@@ -28,8 +27,7 @@ function Card({ data, pageName }, { isAuth }) {
                 </svg>
 
                 <div className="card-body">
-                  {/* <p className="card-text">{post.description}</p> */}
-                  <h4 className="card-text">{post.title}</h4>
+                   <h4 className="card-text">{post.title}</h4>
                   <div className="d-flex justify-content-between align-items-center">
                     <div className="btn-group">
                       <Link
@@ -44,8 +42,6 @@ function Card({ data, pageName }, { isAuth }) {
                         Price ${parseInt(post.price).toLocaleString()}
                       </button>
                     </div>
-
-                    {/* <small className="text-muted">9 mins</small> */}
                   </div>
                 </div>
               </div>

@@ -6,7 +6,7 @@ function Footer() {
   const currentDate = day.getFullYear();
 
   return (
-    <div className="footer">
+    <footer>
       <div className="footer-left">
         <p>Copyright © {currentDate} | All rights reserved.</p>
       </div>
@@ -17,7 +17,7 @@ function Footer() {
         <img src="./images/instagram.png" alt="instagram-icon" />
         <img src="./images/facebook.png" alt="facebook-icon" />
       </div>
-    </div>
+    </footer>
   );
 }
 

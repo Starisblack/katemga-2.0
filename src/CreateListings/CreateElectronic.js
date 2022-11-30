@@ -9,8 +9,8 @@ const CreateElectronic = () => {
     model: "",
     color: "",
     location: "",
-    price: 0,
-    phone: 0,
+    price: "",
+    phone: "",
     description: "",
   });
   const navigate = useNavigate();
@@ -44,87 +44,87 @@ const CreateElectronic = () => {
 
   return (
     <div>
-    <div className="cpContainer">
-      <h1 className="post-header">List a Phone | Computer | Tablet</h1>
+      <div className="cpContainer">
+        <h1 className="post-header">List a Phone | Computer | Tablet</h1>
 
-      <div id="form-group">
-        <label for="title">Listing Title</label>
-        <input
-          className="form-control"
-          type="text"
-          name="title"
-          required
-          value={electronicData.title}
-          onChange={onChangeHandler}
-        />
-        <label for="brand">Brand</label>
-        <input
-          className="form-control"
-          type="text"
-          name="brand"
-          value={electronicData.brand}
-          onChange={onChangeHandler}
-        />
-        <label for="brand">Model</label>
-        <input
-          className="form-control"
-          type="text"
-          name="model"
-          value={electronicData.model}
-          onChange={onChangeHandler}
-        />
-        <label for="brand">Color</label>
-        <input
-          className="form-control"
-          type="text"
-          name="color"
-          value={electronicData.color}
-          onChange={onChangeHandler}
-        />
-        <label for="location">Location</label>
-        <input
-          className="form-control"
-          type="text"
-          name="location"
-          value={electronicData.location}
-          onChange={onChangeHandler}
-        />
-        <label for="price">Price $</label>
-        <input
-          className="form-control"
-          type="text"
-          name="price"
-          value={electronicData.price}
-          onChange={onChangeHandler}
-        />
-        <label for="tel">Phone Number</label>
-        <input
-          className="form-control"
-          type="number"
-          name="phone"
-          value={electronicData.phone}
-          onChange={onChangeHandler}
-        />
+        <div id="form-group">
+          <label for="title">Listing Title</label>
+          <input
+            className="form-control"
+            type="text"
+            name="title"
+            required
+            value={electronicData.title}
+            onChange={onChangeHandler}
+          />
+          <label for="brand">Brand</label>
+          <input
+            className="form-control"
+            type="text"
+            name="brand"
+            value={electronicData.brand}
+            onChange={onChangeHandler}
+          />
+          <label for="brand">Model</label>
+          <input
+            className="form-control"
+            type="text"
+            name="model"
+            value={electronicData.model}
+            onChange={onChangeHandler}
+          />
+          <label for="brand">Color</label>
+          <input
+            className="form-control"
+            type="text"
+            name="color"
+            value={electronicData.color}
+            onChange={onChangeHandler}
+          />
+          <label for="location">Location</label>
+          <input
+            className="form-control"
+            type="text"
+            name="location"
+            value={electronicData.location}
+            onChange={onChangeHandler}
+          />
+          <label for="price">Price $</label>
+          <input
+            className="form-control"
+            type="text"
+            name="price"
+            value={electronicData.price}
+            onChange={onChangeHandler}
+          />
+          <label for="tel">Phone Number</label>
+          <input
+            className="form-control"
+            type="number"
+            name="phone"
+            value={electronicData.phone}
+            onChange={onChangeHandler}
+          />
 
-        <label for="">Description</label>
-        <textarea
-          className="form-control"
-          name="description"
-          id=""
-          cols="30"
-          rows="5"
-          value={electronicData.description}
-          onChange={onChangeHandler}
-        ></textarea>
+          <label for="">Description</label>
+          <textarea
+            className="form-control"
+            name="description"
+            id=""
+            cols="30"
+            rows="5"
+            value={electronicData.description}
+            onChange={onChangeHandler}
+          ></textarea>
+        </div>
+        <button
+          className="btn btn-primary post-btn"
+          type="submit"
+          onClick={addElectronicListing}
+        >
+          Publish
+        </button>
       </div>
-      <button
-        className="btn btn-primary post-btn"
-        type="submit"
-        onClick={addElectronicListing}
-      >
-        Publish
-      </button>
-    </div>
     </div>
   );
 };

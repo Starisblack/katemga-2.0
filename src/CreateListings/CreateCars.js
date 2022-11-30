@@ -7,12 +7,12 @@ const CreateCars = () => {
     title: "",
     brand: "",
     model: "",
-    mileage: 0,
-    year: 0,
+    mileage: "",
+    year: "",
     color: "",
     location: "",
-    price: 0,
-    phone: 0,
+    price: "",
+    phone: "",
     description: "",
   });
   const navigate = useNavigate();
@@ -43,6 +43,7 @@ const CreateCars = () => {
     Axios.post("http://localhost:3001/cars/create", template);
 
     console.log(template);
+    console.log("new listing added to DB");
     navigate("/cars-trucks");
   };
   return (
@@ -55,10 +56,10 @@ const CreateCars = () => {
           className="form-control"
           type="text"
           name="title"
-          required
           autoFocus
           value={carListingData.title}
           onChange={onchangeHandler}
+          required={true}
         />
         <label for="brand">Brand</label>
         <input

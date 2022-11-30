@@ -1,22 +1,16 @@
 import { useState } from "react";
-import { Link} from "react-router-dom";
-import PhoneIcon from '@mui/icons-material/Phone';
-import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
-import "./singlePage.css"
-
-
+import { Link } from "react-router-dom";
+import PhoneIcon from "@mui/icons-material/Phone";
+import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
+import "./singlePage.css";
 
 const CardSinglePage = (props) => {
+  const [showPhone, SetShowPhone] = useState(false);
 
+  const onClickHandler = () => {
+    SetShowPhone(true);
+  };
 
-
-    const [showPhone, SetShowPhone] = useState(false);
-
-
-   const  onClickHandler = () => {
-       
-            SetShowPhone(true)
-    }
 
     return  (
         <div className="container-fluid">
@@ -62,16 +56,10 @@ const CardSinglePage = (props) => {
                     <div className="safety-tips">4. Pay only after collecting the item</div></div>
                    </div>
                 </div>
-             
-            </div>
-
-          
-
-           
-
-        </div>
-    )
-}
-
+                </div>
+                </div>
+    )        
+            
+};
 
 export default CardSinglePage;

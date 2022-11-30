@@ -24,23 +24,24 @@ function ContactUs() {
           <input
             id="from_name"
             name="user_name"
-            class="c-input"
+            className="c-input"
             type="text"
-            placeholder="name"
+            placeholder="Name"
             required
+            autoFocus
           />
           <input
             id="from_email"
             name="user_email"
-            class="c-input"
+            className="c-input"
             type="email"
-            placeholder="email"
+            placeholder="E-mail"
             required
           />
           <textarea
             id="message"
             name="message"
-            class="contact-msg"
+            className="contact-msg"
             placeholder="Type your message..."
             cols="33"
             rows="10"
